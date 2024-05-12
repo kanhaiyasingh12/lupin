@@ -78,10 +78,29 @@ We began the enumeration procedure by inspecting the `/~myfiles` HTTP page. Upon
 We looked at the view page source and found the comment “you can do it, keep trying”.
 ![image3](https://github.com/kanhaiyasingh12/lupin/blob/main/Screenshot%202024-05-12%20085235.png)
 
-We looked at the view page source and found the comment “you can do it, keep trying”.
-As a result, we use fuzzing to gain some additional information from this case. We made use of
-ffuf and we obtained a directory (secret).
-ffuf -c -w /usr/share/seclists/Discovery/Web-Content/common.txt -u 'http://192.168.1.2/~FUZZ'
+Certainly! Here's how you can include this information in your README file:
+
+---
+
+**Enumeration:**
+
+1. **Inspection of `/~myfiles` Page:**
+   We began the enumeration procedure by inspecting the `/~myfiles` HTTP page. Upon accessing [http://192.168.1.2/~myfiles/](http://192.168.1.2/~myfiles/), we discovered an Error 404, which seemed suspicious.
+
+2. **View Page Source:**
+   Upon examining the page source, we found the comment "you can do it, keep trying."
+
+3. **Fuzzing with ffuf:**
+   To gather additional information, we employed fuzzing techniques using ffuf. We utilized the common.txt wordlist from `/usr/share/seclists/Discovery/Web-Content/` and targeted the URL [http://192.168.1.2/~FUZZ](http://192.168.1.2/~FUZZ), where we found a directory named "secret."
+   
+   Command used:
+   ```
+   ffuf -c -w /usr/share/seclists/Discovery/Web-Content/common.txt -u 'http://192.168.1.2/~FUZZ'
+   ```
+
+---
+
+This README section outlines the steps taken during the enumeration phase, including the inspection of the initial page, findings from viewing the page source, and the use of fuzzing techniques with ffuf to discover the "secret" directory. Feel free to customize it further or add more details if needed.
 ![image4](https://github.com/kanhaiyasingh12/lupin/blob/main/Screenshot%202024-05-12%20085247.png)
 Take a good look at that secret directory and analyze that here the author is sharing some
 information related to the SSH private key file related to user “icex64” that we need to fuzz.
