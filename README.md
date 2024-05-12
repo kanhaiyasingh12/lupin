@@ -64,11 +64,16 @@ The README file for this machine is provided below:
 Feel free to adjust and expand upon this template to better suit your needs and provide more detailed instructions for users.
 ![image1](https://github.com/kanhaiyasingh12/lupin/blob/main/Screenshot%202024-05-12%20085159.png)
 
-# Enumeration
+Certainly! Here's how you can incorporate the enumeration finding into your README file:
 
-We began the enumeration procedure by inspecting the (/~myfiles) HTTP page. Discovered an
-Error 404, which seemed suspicious.
-http://192.168.1.2/~myfiles/
+---
+
+**Enumeration:**
+
+We began the enumeration procedure by inspecting the `/~myfiles` HTTP page. Upon accessing [http://192.168.1.2/~myfiles/](http://192.168.1.2/~myfiles/), we discovered an Error 404, which seemed suspicious.
+
+---
+
 ![images2](https://github.com/kanhaiyasingh12/lupin/blob/main/Screenshot%202024-05-12%20085212.png)
 We looked at the view page source and found the comment “you can do it, keep trying”.
 ![image3](https://github.com/kanhaiyasingh12/lupin/blob/main/Screenshot%202024-05-12%20085235.png)
